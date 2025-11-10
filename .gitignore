@@ -1,0 +1,38 @@
+# Creado por un programador de Python
+
+### Carpetas y Archivos del Entorno Virtual ###
+# Entornos virtuales estándar
+venv
+env
+.venv
+.env
+
+# Directorios de caché y compilación de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.$py.class
+
+# Archivos de caché del buildout
+.installed.cfg
+
+# Directorios de compilación de Cython/C/etc.
+build/
+dist/
+*.egg-info/
+
+### Configuración Específica de VS Code ###
+# Carpeta de configuración de usuario local de VS Code
+.vscode/
+
+### Datos de Debugging, Testing y Logs ###
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+*.sqlite3
+
+### Archivos Generados por Sistemas Operativos ###
+.DS_Store
+Thumbs.db
