@@ -36,3 +36,17 @@ htmlcov/
 ### Archivos Generados por Sistemas Operativos ###
 .DS_Store
 Thumbs.db
+
+# Entorno virtual
+venv/
+
+# Archivos de coverage
+htmlcov/
+.coverage
+
+# Cachés de Python
+__pycache__/
+*.py[cod]
+
+# Config de VSCode (opcional)
+.vscode/

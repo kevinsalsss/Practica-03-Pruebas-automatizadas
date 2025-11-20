@@ -1,17 +1,18 @@
 import unittest
 from src.procesador import Analizador
 
-# Define una función regular para verificar que un valor de venta sea mayor a 5000
+
 def es_mayor_a_cinco_mil(valor_venta):
     """Convierte el valor a float y verifica si es mayor a 5000."""
     return float(valor_venta) > 5000
+
 
 class TestAnalizador(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        # Asumiendo que esta clase de Analizador existe y carga los datos correctamente
-        cls.analizador = Analizador("data/sri_ventas_2024.csv")
+        # El archivo se asume relativo al directorio raíz del proyecto
+        cls.analizador = Analizador("datos/sri_ventas_2024.csv")
 
     def test_ventas_totales_como_diccionario(self):
         resumen = self.analizador.ventas_totales_por_provincia()
@@ -32,6 +33,10 @@ class TestAnalizador(unittest.TestCase):
             self.analizador.ventas_por_provincia("Narnia")
 
     def test_ventas_por_provincia_existente(self):
-        # Es mejor usar mayúsculas/minúsculas correctas si el método es sensible
-        resultado = self.analizador.ventas_por_provincia("Pichincha") 
+        # Pichincha debería existir y tener un total mayor a 0
+        resultado = self.analizador.ventas_por_provincia("Pichincha")
         self.assertGreater(resultado, 0)
+
+
+if __name__ == "__main__":
+    unittest.main()
